@@ -15,4 +15,32 @@ Let's import data using the `readr` package.
 litters_df <- read_csv("data/FAS_litters.csv")
 litters_df <- janitor::clean_names(litters_df)
 ```
+Look at the data
+
+```{r}
+litters_df
+
+head(litters_df)
+tail(litters_df)
+```
+
+```{r, eval = FALSE}
+View(litters_df)
+```
+
+```{r}
+skimr::skim(litters_df)
+```
+
+
+`read_csv` options..
+
+Example: Read the dataset including missing observation coded "NA", "na", or missing the
+code and skip reading the first two lines of the dataset.
+
+```{r, eval = FALSE}
+read_csv("data/FAS_litters.csv", na = c("NA", "na", ""), skip = 2)
+```
+
+# Other file formats
 
