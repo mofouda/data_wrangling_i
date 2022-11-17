@@ -2,7 +2,7 @@ data_manipulation with `dplyr`
 ================
 
     ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-    ## ✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
+    ## ✔ ggplot2 3.3.6      ✔ purrr   0.3.5 
     ## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
     ## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
     ## ✔ readr   2.1.3      ✔ forcats 0.5.2 
@@ -211,13 +211,13 @@ logical operators `&` and `|`, or negated using `!`.
 
 Some ways you might filter the litters data are:
 
--   `gd_of_birth == 20`
--   `pups_born_alive >= 2`
--   `pups_survive != 4`
--   `!(pups_survive == 4)`
--   `!((pups_survive == 4) & (gd_of_birth >= 30))`
--   `group %in% c("Con7", "Con8")`
--   `group == "Con7" & gd_of_birth == 20`
+- `gd_of_birth == 20`
+- `pups_born_alive >= 2`
+- `pups_survive != 4`
+- `!(pups_survive == 4)`
+- `!((pups_survive == 4) & (gd_of_birth >= 30))`
+- `group %in% c("Con7", "Con8")`
+- `group == "Con7" & gd_of_birth == 20`
 
 Let’s try one or two …
 
@@ -274,9 +274,9 @@ A very common filtering step requires you to omit missing observations.
 You *can* do this with `filter`, but I recommend using `drop_na` from
 the `tidyr` package:
 
--   `drop_na(litters_data)` will remove any row with a missing value
--   `drop_na(litters_data, wt_increase)` will remove row for which
-    `wt_increase` is missing
+- `drop_na(litters_data)` will remove any row with a missing value
+- `drop_na(litters_data, wt_increase)` will remove row for which
+  `wt_increase` is missing
 
 Filtering can be helpful for limiting a dataset to only those
 observations needed for analysis. However, I recommend against the
@@ -312,12 +312,11 @@ mutate(litters_data,
 
 A few things in this example are worth noting:
 
--   Your new variables can be functions of old variables
--   New variables appear at the end of the dataset in the order that
-    they are created
--   You can overwrite old variables
--   You can create a new variable and immediately refer to (or change)
-    it
+- Your new variables can be functions of old variables
+- New variables appear at the end of the dataset in the order that they
+  are created
+- You can overwrite old variables
+- You can create a new variable and immediately refer to (or change) it
 
 Creating a new variable that does exactly what you need can be
 challenging; the more functions you know about the easier it gets.
@@ -376,8 +375,8 @@ suppose you want to load the data, clean the column names, remove
 `pups_survive`, and create `wt_gain`. There are a couple of options for
 this kind of multi-step data manipulation:
 
--   define intermediate datasets (or overwrite data at each stage)
--   nest function calls
+- define intermediate datasets (or overwrite data at each stage)
+- nest function calls
 
 The following is an example of the first option which results in too
 many datasets:
@@ -500,3 +499,5 @@ too long; there isn’t a great way to deal with multiple inputs and
 outputs; and (since it’s not base R) not everyone will know what `%>%`
 means or does. That said, compared to days when R users only had the
 first two options, life is much better!
+
+\$
