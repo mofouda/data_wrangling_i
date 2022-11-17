@@ -499,5 +499,3 @@ too long; there isn’t a great way to deal with multiple inputs and
 outputs; and (since it’s not base R) not everyone will know what `%>%`
 means or does. That said, compared to days when R users only had the
 first two options, life is much better!
-
-\$
